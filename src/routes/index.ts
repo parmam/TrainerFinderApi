@@ -1,14 +1,14 @@
 import { Router } from "express";
-import { authRoutes } from "@routes/auth.routes";
-import { healthRoutes } from "@routes/health.routes";
-import { userRoutes } from "@routes/user.routes";
+import { authRoutes } from "./auth.routes";
+import { userRoutes } from "./user.routes";
+import { healthRoutes } from "./health.routes";
+import { paymentRoutes } from "./payment.routes";
 
-export const routes = Router();
+const router = Router();
 
-routes.use("/auth", authRoutes);
-routes.use("/users", userRoutes);
-routes.use("/health", healthRoutes);
+router.use("/auth", authRoutes);
+router.use("/users", userRoutes);
+router.use("/health", healthRoutes);
+router.use("/payments", paymentRoutes);
 
-export * from "./auth.routes";
-export * from "./health.routes";
-export * from "./user.routes";
+export { router as routes };
