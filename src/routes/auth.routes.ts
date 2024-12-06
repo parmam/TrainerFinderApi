@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { AuthController } from "../controllers/auth.controller";
-import { AuthService } from "../services/auth.service";
-import { isAuthenticated } from "../middlewares/auth.middleware";
+import { AuthController } from "@controllers/auth.controller";
+import { AuthService } from "@services/auth.service";
+import { isAuthenticated } from "@middlewares/auth.middleware";
 export const authRoutes = Router();
 
 // Initialize dependencies

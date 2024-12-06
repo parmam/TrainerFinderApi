@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { authRoutes } from "./auth.routes";
-import { healthRoutes } from "./health.routes";
-import { userRoutes } from "./user.routes";
+import { authRoutes } from "@routes/auth.routes";
+import { healthRoutes } from "@routes/health.routes";
+import { userRoutes } from "@routes/user.routes";
 
 export const routes = Router();
 
